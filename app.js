@@ -17,10 +17,10 @@ if(process.env.NODE_ENV!=="PRODUCTION"){
 //   });
 
 // Set the SameSite attribute to None for all cookies
-// app.use((req, res, next) => {
-//   res.header('Set-Cookie', 'SameSite=None; Secure');
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header('Set-Cookie', 'SameSite=None; Secure');
+  next();
+});
 var corsoption={
     origin: ['https://famous-zabaione-78119e.netlify.app','http://localhost:3000'],
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
