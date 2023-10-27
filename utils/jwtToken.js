@@ -5,7 +5,7 @@ const sendToken=(user,statusCode,res)=>{
     // console.log(`$toekns is ${token}`)
 
     //saving cookie
-    res.status(statusCode).cookie("token",token,{expires: new Date(Date.now() + process.env.COOKIE_EXPIRE*24*60*60*1000),httpOnly:false,sameSite='none', secure='auto'}).json({
+    res.status(statusCode).cookie("token",token,{expires: new Date(Date.now() + process.env.COOKIE_EXPIRE*24*60*60*1000),httpOnly:false,sameSite:'none', secure:true}).json({
         success:true,
         user,
         token,
