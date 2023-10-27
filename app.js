@@ -16,7 +16,8 @@ if(process.env.NODE_ENV!=="PRODUCTION"){
 //     next();
 //   });
 var corsoption={
-    origin:true,
+    origin: ['https://famous-zabaione-78119e.netlify.app','http://localhost:3000'],
+    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
     credentials:true
 }
 app.use(cors(corsoption));
